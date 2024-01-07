@@ -10,5 +10,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', () => {
     postIframeHeight();
-});        
+});
+
+window.onload = ()=>{
+    postIframeHeight();
+};
+
 
