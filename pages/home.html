@@ -15,27 +15,72 @@
     <body class="home">
         <header id="childheader">
         </header>
-        <!--スライドショー-->
-        <aside id="mainheaderimg">
-            <img src="../images/headerimage1.jpg" alt="" class="slide0">
-            <img src="../images/headerimage2.jpg" alt="" class="slide1">
-            <img src="../images/headerimage3.jpg" alt="" class="slide2">
-            <img src="../images/headerimage4.jpg" alt="" class="slide3">
-        </aside>
-
-        <script type="text/javascript">
-            // const postIframeHeight = () => {
-            //     const height = document.documentElement.offsetHeight;
-            //     window.parent.postMessage({ iframeHeight: height }, '*'); // https://example.comはiframeを埋め込むサイトのオリジンに置き換える
-            // };
-
-            // window.addEventListener('DOMContentLoaded', () => {
-            //     postIframeHeight();
-            // });
-
-            // window.addEventListener('resize', () => {
-            //     postIframeHeight();
-            // });        
-        </script>
+        <div class="mainimgcontainer">
+            <!--スライドショー-->
+            <aside id="mainheaderimg">
+                <img src="../images/headerimage1.jpg" alt="" class="slide0">
+                <img src="../images/headerimage2.jpg" alt="" class="slide1">
+                <img src="../images/headerimage3.jpg" alt="" class="slide2">
+                <img src="../images/headerimage4.jpg" alt="" class="slide3">
+            </aside>
+            <div class="mainheadercomment">
+                <p class="mainheaderwelcome">ようこそ！こころの元気クリニックへ</p>
+                <p class="mainheadergenki">健康はこころとからだの元気から</p>                
+            </div>
+        </div>
+        <section class="homeelement">
+            <h2>ご挨拶</h2>
+            <p>
+                ようこそ！こころの元気クリニックへ<br/>
+                こころとからだはつながっています。<br/><br/>
+                こころの元気とからだの元気がバランス良く整って健康といえます。<br/>
+                しかし現代はストレス社会といわれています。<br/>
+                どうしてもムリをしがちです。<br/><br/>
+                ストレスが悩みを深くしたり、身体の不調に出てくることもあります。<br/>
+                当クリニックでは、ストレスなどで心身のバランスをくずされた方が、<br/>
+                本来の元気を取り戻し、体調よく生き生きとした毎日を過ごせるようお手伝いをさせていただきます。<br/><br/>
+                どうぞお気軽にご相談ください。<br/>
+            </p>    
+        </section>
+        <section class="homeelement">
+            <h2>お知らせ</h2>
+            <ul class="home-news-list">
+                <li class="home-news-list-item">
+                    <a href="#">
+                        <p class="home-news-list-date">2023/12/29</p>
+                        <p class="home-news-list-category"><span>お知らせ</span></p>
+                        <p class="home-news-list-title">令和５年１２月２９日（金）から６年１月５日（金）まで冬期休業とさせていただきます。<br/>ご迷惑をおかけしますが、何卒ご了承下さい。</p>
+                    </a>
+                </li>
+                <li class="home-news-list-item">
+                    <a href="#">
+                        <p class="home-news-list-date">2023/7/31</p>
+                        <p class="home-news-list-category"><span>お知らせ</span></p>
+                        <p class="home-news-list-title">令和５年７月３１日で新型コロナ感染症対策の特例が廃止されます。<br/>その後は処方箋（お薬）希望の方は必ず受診が必要になりますのでご注意下さい。</p>
+                    </a>
+                </li>
+                <li class="home-news-list-item">
+                    <a href="#">
+                        <p class="home-news-list-date">2023/7/31</p>
+                        <p class="home-news-list-category"><span>お願い</span></p>
+                        <p class="home-news-list-title">土曜日は受診の方が多数であり受付職員が一人の事があります。<br/>電話に出られないことがあると予想されますのでご了承下さい。<br/>問い合わせや予約はなるべく平日にお願いします。</p>
+                    </a>
+                </li>
+                <li class="home-news-list-item">
+                    <a href="#">
+                        <p class="home-news-list-date">2023/7/31</p>
+                        <p class="home-news-list-category"><span>電話対応について</span></p>
+                        <p class="home-news-list-title">最近外来が混み合っており受付の電話対応が出来ないことがあります。<br/>当日ではなく早めにお問い合わせ下さい。申し訳ありません。</p>
+                    </a>
+                </li>
+                <li class="home-news-list-item">
+                    <a href="#">
+                        <p class="home-news-list-date">2020/12/8</p>
+                        <p class="home-news-list-category"><span>オンライン診療</span></p>
+                        <p class="home-news-list-title">令和２年１２月８日からオンライン診療を始めます。再診の方だけです。<br/>また診療の時間が限られますので詳しくは<br/>当ホームページのオンライン診療コーナーをを見て下さい。<br/>遠方の方や外出が出来ない方などご利用下さい。</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
     </body>
 </html>

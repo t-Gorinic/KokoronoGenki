@@ -2,13 +2,28 @@
 html,body{margin:0;padding:0;}
 
 /* ヘッダー、ボディ、フッターを縦に並べる */
-body, div.call-header{
+body{
     display: flex;
     flex-direction: column;
 }
+/* 背景画像を設定する */
+body, footer, header{
+    background-image: url(../images/mainbackground.jpg);
+    background-color:rgba(255, 255, 255, 0);
+    /* background-blend-mode:lighten; */
+}
+/* 画像の反転と文字のみ反転を戻す役割を付与 */
+footer{
+    transform: scale(1, -1);
+}
+.footerreverse{
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1, -1); 
+}
 
-p, span, a{
-    font-family: "游明朝体","YuMincho"; font-weight: 600;
+p, span, a, h2{
+    font-family: "游明朝体", "Yu Mincho", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+    font-weight: 600;
 }
 
 /* ///////////////ヘッダーの設定////////////////// */
@@ -17,13 +32,16 @@ p, span, a{
     width: 100%;
     align-items: center;
 }
+div.call-header{
+    display: flex;
+    flex-direction: column;
+}
 
 .header-top {
-    padding: 0 5%;
+    margin: 0 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #FFFFFF;
 }
 
 .gnav-pc-wrap {
@@ -49,15 +67,13 @@ ul.gnav-pc li a:hover , ul.gnav-pc li span:hover{
     color: #e6b422;
 }
 
-
-
 /* ///////////////フッターの設定////////////////// */
 
 p#footerAccess{
     width: 100%;
+    height: 1px;
     text-align: center;
-    padding: 2px;
-    background-color: #FFF9E6;
+    background-color: orange;
 }
 section#footerTop{
     display: flex;
@@ -72,12 +88,12 @@ section#footerTop iframe{
     margin: 0 5%;
 }
 .footerTopLocation p{
-    font-size: 19px;
+    font-size: 25px;
 }
 #footerBottom{
     text-align: center;
 }
-#footerBottom div {
+#footerBottom div{
     width: 200px;
     height: 60px;
     line-height: 60px;
@@ -85,4 +101,92 @@ section#footerTop iframe{
     border-radius: 50%;
     color: #fff;
     margin: 10px auto;
+}
+
+
+/* ///////////////Homeの設定////////////////// */
+
+div.mainimgcontainer{
+    width: 100%;
+    position: relative;
+}
+div.mainimgcontainer div{
+    position: absolute;
+    top:70%;
+    left:5%;
+    width: 100%;
+    color: #FFFFFF;
+}
+div.mainimgcontainer p.mainheaderwelcome{
+    font-size: 15px;
+}
+div.mainimgcontainer p.mainheadergenki{
+    font-size: 40px;
+    line-height: 0.1;
+    letter-spacing: 0.01em;
+}
+
+section.homeelement{
+    text-align: center !important;
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 50px 0;
+}
+section.homeelement h2{
+    border-bottom: 1px solid #d3d3d3; 
+    margin: 50px 30% 10px 30%;
+}
+
+.home-news-list{
+    list-style: none outside;
+    margin: 0 20%;
+    padding: 0;
+}
+.home-news-list .home-news-list-item a{
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #CCC;
+    padding: 20px 20px;
+}
+.home-news-list .home-news-list-item .home-news-list-date{
+    margin: 0;
+    min-width: 140px;
+    font-size: 16px;
+    color: #999;
+    padding: 0 20px 0 0;
+}
+.home-news-list .home-news-list-item .home-news-list-category{
+    margin: 0 auto;
+    min-width: 140px;
+    padding: 0 20px 0 0;
+}
+.home-news-list .home-news-list-item .home-news-list-category span{
+    background: #999;
+    color: #FFF;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 12px;
+    line-height: 1;
+}
+.home-news-list .home-news-list-item .home-news-list-title{
+    margin: 0 auto;
+    width: 100%;
+}
+.home-news-list .home-news-list-item a:hover .home-news-list-title{
+    color: #00F;
+}
+
+@media screen and (max-width: 767px){
+.home-news-list .home-news-list-item a{
+    flex-wrap: wrap;
+}
+.home-news-list .home-news-list-item .home-news-list-date{
+    min-width: 100px;
+}
+.home-news-list .home-news-list-item .home-news-list-title{
+    margin-top: 10px;
+}
 }
