@@ -2,8 +2,13 @@
 html,body{margin:0;padding:0;}
 
 /* ヘッダー、ボディ、フッターを縦に並べる */
-body{
+body, div.call-header{
+    display: flex;
     flex-direction: column;
+}
+
+p, span, a{
+    font-family: "游明朝体","YuMincho"; font-weight: 600;
 }
 
 /* ///////////////ヘッダーの設定////////////////// */
@@ -16,6 +21,7 @@ body{
 .header-top {
     padding: 0 5%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     background-color: #FFFFFF;
 }
@@ -39,6 +45,44 @@ ul.gnav-pc li a {
     font-weight: bold;
 }
 
-ul.gnav-pc li:hover {
-    color: rgb(214, 237, 248);
+ul.gnav-pc li a:hover , ul.gnav-pc li span:hover{
+    color: #e6b422;
+}
+
+
+
+/* ///////////////フッターの設定////////////////// */
+
+p#footerAccess{
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+    background-color: #FFF9E6;
+}
+section#footerTop{
+    display: flex;
+    justify-content: space-between;
+}
+section#footerTop iframe{
+    width: 100%;
+    aspect-ratio: 5 / 4;
+}
+.footerTopLocation{
+    width: 50%;
+    margin: 0 5%;
+}
+.footerTopLocation p{
+    font-size: 19px;
+}
+#footerBottom{
+    text-align: center;
+}
+#footerBottom div {
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    background-color: orange;
+    border-radius: 50%;
+    color: #fff;
+    margin: 10px auto;
 }
