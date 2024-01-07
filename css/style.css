@@ -1,31 +1,29 @@
+/* 余白なしで表示するための設定 */
 html,body{margin:0;padding:0;}
-/* body.home{
-    background-color: #FFF9E6;
-} */
+
+/* ヘッダー、ボディ、フッターを縦に並べる */
+body{
+    flex-direction: column;
+}
+
+/* ///////////////ヘッダーの設定////////////////// */
+
 #header {
-    width: calc(100% - 160px);
-    height: 70px;
+    width: 100%;
+    align-items: center;
+}
+
+.header-top {
+    padding: 0 5%;
     display: flex;
     justify-content: space-between;
-    padding: 0 80px;
-    background-color: #FFF9E6;
-}
-
-.header-logo {
-    display: flex;
-    align-items: center;
-    width: 300px;
-}
-
-.header-logo a {
-    display: flex;
-    font-size: 25px;
+    background-color: #FFFFFF;
 }
 
 .gnav-pc-wrap {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    background-color: #FFF9E6;
 }
 
 ul.gnav-pc li {
@@ -41,6 +39,6 @@ ul.gnav-pc li a {
     font-weight: bold;
 }
 
-ul.gnav-pc:hover {
+ul.gnav-pc li:hover {
     color: rgb(214, 237, 248);
 }
