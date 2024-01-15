@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- ページは日本語 -->
+<html lang="ja">
+    <head>
+        <!-- 文字コードはUTF-8 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>こころの元気クリニック</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="熊本県の皆様を元気にしたい">
+        <meta name="keywords" content="こころの元気クリニック,熊本,山田健二,精神科,水道町">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/slide.css">
+        <script src="js/open.js"></script>
+    </head>
+    
+    <body class="home">
+        <header id="header">
+            <div class="header-top">
+                <h1>こころの元気クリニック</h1>
+                <div class="call-header">
+                    <span>熊本市中央区水道町8-2 秀匠苑ビル5F</span>
+                    <span><a href="tel:096-288-3146">096-288-3146</a></span>
+                </div>
+            </div>
+            <nav class="gnav-pc-wrap">
+                <ul class="gnav-pc">
+                    <li><a href="pages/home.html" target="bodyifr">ホーム</a></li>
+                    <li><a href="pages/greeting.html" target="bodyifr">ご挨拶</a></li>
+                    <li><a href="pages/medical.html" target="bodyifr">診療内容</a></li>
+                    <li><a href="pages/foreveryone.html" target="bodyifr">このような方へ</a></li>
+                    <li><a href="pages/online.html" target="bodyifr">オンライン診療</a></li>
+                </ul>
+            </nav>    
+        </header>
+
+        <!-- 各ページの内容を表示するためのフレーム -->
+        <iframe id="bodyifr" name="bodyifr" width="100%" frameborder="0" scrolling="no" src="pages/home.html"></iframe>
+
+        <footer id="footer">
+        <div class="footerreverse">
+            <p id="footerAccess"></p>
+            <section id="footerTop">
+                <div class="footerTopLocation">
+                    <div class="footerTopElement">
+                        <p>〒860-0844<br/>
+                            &emsp;&emsp;熊本市中央区水道町8-2 秀匠苑ビル5F
+                        </p>
+                        <p>最寄り駅<br/>
+                            &emsp;&emsp;熊本市電 水道町 &nbsp;徒歩2分<br/>
+                            &emsp;&emsp;水道町バス停&emsp;&emsp;徒歩2分<br/>                        
+                        </p>
+                        <p>車でお越しの方へ<br/>
+                            &emsp;&emsp;駐車場はありません<br/>
+                            &emsp;&emsp;近隣の駐車場をご利用ください
+                        </p>
+                    </div>
+                    <div class="footerTopElement">
+                        <p>096-288-3146（予約はこちらへ）</p>
+                    </div>
+                </div>
+                <div class="footerTopLocation">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.6020881920535!2d130.71093087512293!3d32.8028084826685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f40981506015%3A0x2d222e130caf1a3b!2z44GT44GT44KN44Gu5YWD5rCX44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1704625343419!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+            <section id="footerBottom">
+                <div>精神科・心療内科</div>
+                <a>こころの元気クリニック</a>
+            </section>
+        </div>
+        </footer>
+
+        <script>
+            window.addEventListener('message', (e) => {
+                if (e.data.hasOwnProperty('iframeHeight')) { 
+                    const iframe = document.getElementById('bodyifr');
+                    iframe.style.height = `${e.data.iframeHeight}px`;
+                }
+            });
+        </script>
+    </body>
+</html>
